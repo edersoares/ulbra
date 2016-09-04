@@ -25,23 +25,46 @@ $finais = [
     'q38' => 'BOOLEAN'
 ];
 
+// Percorre todas a linhas do arquivo
 for ($i = 1; $linha = fgets($arquivo); $i++) {
 
+    // A função inicial sempre é q0
     $estado = $inicial;
 
+    // Percorre todos os caracteres da linha
     for ($j = 0; isset($linha[$j]); $j++) {
 
+        // Caso o estado atual retorne outro estado válido continua a verificar
         if ($estado = $estado($linha[$j]))
             continue;
 
+        // Armazena linha com erro
         $erros[] = $i;
 
         break;
     }
 
-    if ($estado) {
-        echo "[{$i}] {$finais[$estado]} ({$estado})\n";
+    if (!$estado)
+        continue;
+
+    switch ($estado) {
+
+        case 'q2':
+            if (in_array($linha, $simbolos)) {
+                $n = array_keys($simbolos, $linha);
+                $n = $n[0];
+            }
+            else {
+                $n = count($simbolos) + 1;
+                $simbolos[$n] = $linha;
+            }
+        break;
+
+        default:
+            $n = '';
     }
+
+    echo "[{$i}] {$finais[$estado]} {$n}\n";
 }
 
 fclose($arquivo);
