@@ -25,9 +25,24 @@ $finais = [
     'q38' => 'BOOLEAN'
 ];
 
-for ($i = 1; $linha = fgets($arquivo); $i++)
-    for ($j = 0; isset($linha[$j]); $j++)
-        echo $linha[$j];
+for ($i = 1; $linha = fgets($arquivo); $i++) {
+
+    $estado = $inicial;
+
+    for ($j = 0; isset($linha[$j]); $j++) {
+
+        if ($estado = $estado($linha[$j]))
+            continue;
+
+        $erros[] = $i;
+
+        break;
+    }
+
+    if ($estado) {
+        echo "[{$i}] {$finais[$estado]} ({$estado})\n";
+    }
+}
 
 fclose($arquivo);
 
