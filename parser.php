@@ -50,6 +50,8 @@ for ($i = 1; $linha = fgets($arquivo); $i++) {
     switch ($estado) {
 
         case 'q2':
+        case 'q3':
+        case 'q5':
             if (in_array($linha, $simbolos)) {
                 $n = array_keys($simbolos, $linha);
                 $n = $n[0];
