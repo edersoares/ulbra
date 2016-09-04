@@ -175,6 +175,9 @@ function q2($c) {
         case 'y':
         case 'z':
             return 'q2';
+
+        case "\n":
+            return 'q2';
     }
 
     return false;
@@ -197,6 +200,9 @@ function q3($c) {
 
         case '.':
             return 'q4';
+
+        case "\n":
+            return 'q3';
     }
 
     return false;
@@ -234,6 +240,9 @@ function q5($c) {
         case '7':
         case '8':
         case '9':
+            return 'q5';
+
+        case "\n":
             return 'q5';
     }
 
