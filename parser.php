@@ -69,12 +69,21 @@ for ($i = 1; $linha = fgets($arquivo); $i++) {
     echo "[{$i}] {$finais[$estado]} {$n}\n";
 }
 
+fclose($arquivo);
+
 echo "Tabela de Símbolos\n";
 
 foreach ($simbolos as $id => $valor)
     echo "{$id} - {$valor}";
 
-fclose($arquivo);
+if (count($erros) == 1) {
+    echo "O programa possui erro na linha: {$erros[0]}\n";
+}
+else if (count($erros) > 1) {
+    $ultimo = array_pop($erros);
+    $erros = implode(', ', $erros);
+    echo "O programa possui erros nas linhas: {$erros} e $ultimo\n";
+}
 
 function q0($c) {
 
