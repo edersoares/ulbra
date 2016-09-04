@@ -1,0 +1,18 @@
+Crie um autômato para reconhecer linguagens cujos tokens são os seguintes:
+
+    - identificadores formados por um sublinhado, podendo possuir depois um ou
+      mais números ou letras
+    - constantes numéricas formadas por um ou mais números inteiros (99)
+    - constantes numéricas formadas por números reais (99.99, por exemplo)
+    - identificadores no formato de comentários em C (/* comentario com espacos
+      em branco */)
+    - as palavras reservadas int, float, real, double, char, boolean
+
+O analisador deve carregar um arquivo-texto contendo um padrão por linha e
+reconhecer o token especificado. O arquivo-texto deve ser especificado pelo
+usuário no momento da execução do programa.
+
+Ao final da análise, o autômato deve exibir:
+    - os tokens de entrada (e a linha onde eles aparecem)
+    - a tabela de símbolos
+    - a lista das linhas onde os erros aparecem (caso tenham erros no arquivo)
