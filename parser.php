@@ -69,6 +69,11 @@ for ($i = 1; $linha = fgets($arquivo); $i++) {
     echo "[{$i}] {$finais[$estado]} {$n}\n";
 }
 
+echo "Tabela de Símbolos\n";
+
+foreach ($simbolos as $id => $valor)
+    echo "{$id} - {$valor}";
+
 fclose($arquivo);
 
 function q0($c) {
