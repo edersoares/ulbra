@@ -13,6 +13,43 @@ typedef struct no {
     struct no *direita;
 } No;
 
+Placa * allocPlaca();
+No * allocNo();
+void menu();
+void menuEscolha(int i);
+void menu1();
+void menu2();
+void menu3();
+void menu4();
+
+int main(int argc, char const *argv[]) {
+
+    Placa *placa;
+    No *no;
+    int opcao;
+
+    placa = allocPlaca();
+    no = allocNo();
+
+    strcpy(placa->letras, "IUY");
+    placa->numeros = 1230;
+
+    no->placa = placa;
+
+    printf("Placa: %s%i\n", no->placa->letras, no->placa->numeros);
+
+    do {
+
+        menu();
+        scanf("%d", &opcao);
+        menuEscolha(opcao);
+
+    } while (opcao < 5);
+
+
+    return 0;
+}
+
 Placa * allocPlaca() {
 
     Placa *placa = (Placa *) malloc(sizeof(Placa));
@@ -85,32 +122,4 @@ void menu3() {
 void menu4() {
     printf("APRESENTAR PLACAS DE FORMA HIERÁRQUICAS\n");
     printf("---------------------------------------\n");
-}
-
-int main(int argc, char const *argv[]) {
-
-    Placa *placa;
-    No *no;
-    int opcao;
-
-    placa = allocPlaca();
-    no = allocNo();
-
-    strcpy(placa->letras, "IUY");
-    placa->numeros = 1230;
-
-    no->placa = placa;
-
-    printf("Placa: %s%i\n", no->placa->letras, no->placa->numeros);
-
-    do {
-
-        menu();
-        scanf("%d", &opcao);
-        menuEscolha(opcao);
-
-    } while (opcao < 5);
-
-
-    return 0;
 }
