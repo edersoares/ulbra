@@ -1,0 +1,31 @@
+ESTRUTURAS DE DADOS II
+Trabalho de implementação – G1
+Profa. Sirlei Isaia
+
+O trabalho vale 2,0 pontos e poderá ser realizado em trio (no máximo), devendo
+ser entregue e apresentado no dia 13/09. Todos os integrantes do grupo deverão
+estar presentes nesta data, para possíveis questionamentos acerca do
+desenvolvimento do trabalho.
+
+Segundo os algoritmos apresentados em aula que manipulam os nodos de uma árvore
+de busca binária, implemente suas operações de (simulação em tempo de execução):
+    → inserção;
+    → listagem pré-ordem;
+    → remoção – conforme estudado em aula;
+    → apresentação hierárquica dos elementos da árvore.
+
+Pontos a serem avaliados:
+    → funcionalidade do programa (faz o que é solicitado): 1,0 pontos
+    → uso de criatividade (interface do programa): 0,5 pontos
+    → explicações sobre o programa desenvolvido: 0,5 pontos
+
+Ressalta-se que cópias de trabalhos serão zeradas!
+    → A árvore deverá manipular placas de carros (por exemplo, IUY 1230), onde
+      as mesmas serão compostas por duas partes – uma que corresponde às letras
+      e outra, aos números. O aspecto de ordenação será dado pelo componente de
+      letras da placa.
+    → A árvore deverá utilizar alocação dinâmica de memória, bem como ter
+      implementação recursiva de suas funções.
+    → A linguagem de programação utilizada fica à escolha do grupo.
+    → A apresentação do trabalho é obrigatória, caso contrário, o trabalho não
+      será avaliado.
