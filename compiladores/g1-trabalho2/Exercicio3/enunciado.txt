@@ -1,0 +1,7 @@
+Ocultador de textos com troca de "estados"
+
+Entrada:
+    Asda asda sd <HIDE>Texto Oculto</HIDE> asdada
+
+Saída:
+    Asda asda sd <HIDE>XXXXXXXXXXXX</HIDE> asdada

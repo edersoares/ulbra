@@ -1,0 +1,13 @@
+Crie um programa em Flex para reconhecer números reais com qualquer
+representação científica.
+
+- 1
+- 1.0
+- -1
+- -1.0
+- 1.99
+- 0.99
+- 1.0E05
+- 0.99E-05
+
+Imprimir RECONHECI REAL e o valor reconhecido

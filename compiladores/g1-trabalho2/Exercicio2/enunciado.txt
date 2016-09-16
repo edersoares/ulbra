@@ -1,0 +1,10 @@
+Crie um programa em Flex para reconhecer números de telefone válidos no Brasil,
+nos formatos abaixo como os exemplos:
+
+- 123456789
+- 12345678
+- 1234-5678
+- 123-456-789
+- 51-1234-5678
+- +55-51-1234-5678
+- +55-11-123-456-789

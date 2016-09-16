@@ -1,0 +1,7 @@
+Ocultador de textos com Criptografia
+
+Entrada:
+    Asda asda sd <CRYPTO>Frase Capaz</CRYPTO> asdada
+
+Saída:
+    Asda asda sd <CRYPTO>GSBTF DBQBA</CRYPTO> asdada
